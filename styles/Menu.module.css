@@ -1,0 +1,69 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    position: relative;
+    margin-top: 3rem;
+}
+
+.introText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .3rem;
+    padding-bottom: 50px;
+
+}
+
+.introText>span:nth-child(1) {
+    font-family: var(--font-monoton);
+    font-size: 2rem;
+    font-weight: bold;
+    gap: 0.4rem;
+    display: flex;
+}
+
+.introText>div {
+    border-radius: 20px;
+    display: flex;
+    gap: 0.8rem;
+    margin-right: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.introText>div>span{
+    font-family: var(--font-montserrat);
+    font-weight: bold;
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+.container>span {
+    position: absolute;
+    top: 15%;
+    margin-left: 1rem;
+    font-size: 1.5rem;
+    font-family: var(--font-monoton);
+    word-spacing: 10px;
+    font-weight: bold;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .container>span {
+        top: 16%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .container>span {
+        top: 13.5%;
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    .container>span  {
+        top: 20%;
+    }
+}

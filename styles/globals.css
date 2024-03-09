@@ -1,0 +1,189 @@
+@import url(https://fonts.googleapis.com/css?family=Monoton:regular);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+@import url(https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,regular,500,600,700,800,900,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+:root {
+  --clr-pink:#FDECEC;
+  --clr-red: #FF033E;
+  --clr-black: #16161d;
+  --clr-smoke: rgb(58, 56, 56);
+  --clr-silver: #C0C0C0;
+  --font-monoton: 'Monoton';
+  --font-montserrat: 'Montserrat';
+  --shadow: -4px 12px 20px -2px rgba(0, 0, 0, 0.19);
+  --font-nunito: 'Nunito Sans';
+  --background-color:  linear-gradient(180deg, rgba(255, 237, 237, 0.85) 0%, rgba(255, 255, 255, 0) 30rem);
+
+}
+
+.monoton {
+    font-family: 'Monoton';
+    font-size: 2rem;
+}
+.montserrat {
+    font-family: var(--font-montserrat);
+}
+.roboto {
+    font-family: var(--font-roboto);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+li {
+   list-style: none;
+}
+
+hr {
+  width: 90%;
+  color: var(--clr-silver);
+  text-align: left;
+  margin-left: 0;
+}
+
+html,
+body {
+  margin: 0;
+  color: var(--clr-black);
+  background: var(--background-color);
+  overflow-x:hidden;
+}
+
+.padding {
+   padding: 2rem 3rem;
+}
+
+ /* background colors  */
+
+.gradient-bg {
+   background: linear-gradient(180deg, rgba(255, 237, 237, 0.85) 0%, rgba(255, 255, 255, 0) 30rem)
+}
+
+
+.loader {
+        background:linear-gradient(180deg, rgba(253, 221, 230, 1) 0%, rgba(255, 255, 255, 1) 50%);
+        display: flex;
+        height: 100vh;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+}
+
+
+
+::-webkit-scrollbar {
+        width: 2px;
+      }
+      /* Track */
+      ::-webkit-scrollbar-track {
+        background: pink;
+      }
+      
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: var(--clr-red);
+        border-radius: 1rem;
+      }
+
+.loader h1 {
+        font-family: var(--font-monoton);
+        line-height: 45px;
+        font-size: 2rem;
+        color: var(--clr-black);
+}
+.loader b {
+        color: var(--clr-red);
+}
+
+.resultsOverlay {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  padding: auto 2rem;
+  align-items: center;
+  
+}
+
+
+@media screen and (min-width: 1200px) {
+  .resultsOverlay {
+    width: 90%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .resultsOverlay {
+    grid-template-columns: repeat(3, 1fr);
+    gap: .5rem;
+    width: 90%;
+    padding: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .resultsOverlay {
+    grid-template-columns: repeat(2, 1fr);
+    gap: .5rem;
+  }
+}
+
+
+/* animations */
+
+.heartbeat{-webkit-animation:heartbeat 1.5s ease-in-out infinite both;animation:heartbeat 1.5s ease-in-out infinite both}
+
+
+ @-webkit-keyframes heartbeat{from{-webkit-transform:scale(1);transform:scale(1);-webkit-transform-origin:center center;transform-origin:center center;-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}10%{-webkit-transform:scale(.91);transform:scale(.91);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}17%{-webkit-transform:scale(.98);transform:scale(.98);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}33%{-webkit-transform:scale(.87);transform:scale(.87);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}45%{-webkit-transform:scale(1);transform:scale(1);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}}@keyframes heartbeat{from{-webkit-transform:scale(1);transform:scale(1);-webkit-transform-origin:center center;transform-origin:center center;-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}10%{-webkit-transform:scale(.91);transform:scale(.91);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}17%{-webkit-transform:scale(.98);transform:scale(.98);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}33%{-webkit-transform:scale(.87);transform:scale(.87);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}45%{-webkit-transform:scale(1);transform:scale(1);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}}
+
+
+ /* ? custom css style for checkbox */
+.checkbox-wrapper-23 *,
+.checkbox-wrapper-23 *:after,
+.checkbox-wrapper-23 *:before {
+  box-sizing: border-box;
+}
+
+.checkbox-wrapper-23 input {
+  position: absolute;
+  opacity: 0;
+}
+  
+.checkbox-wrapper-23 input:checked + label svg path {
+  stroke-dashoffset: 0;
+}
+  
+.checkbox-wrapper-23 input:focus + label {
+  transform: scale(1.03);
+}
+
+.checkbox-wrapper-23 input + label {
+  display: block;
+  border: 2px solid #333;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all .2s ease;
+}
+  
+.checkbox-wrapper-23 input + label:active {
+  transform: scale(1.05);
+  border-radius: 12px;
+}
+  
+.checkbox-wrapper-23 input + label svg {
+  pointer-events: none;
+  padding: 5%;
+}
+
+.checkbox-wrapper-23 input + label svg path {      
+  fill: none;     
+  stroke: #333;
+  stroke-width: 4px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 101;
+  transition: all 250ms cubic-bezier(1,0,.37,.91);
+}

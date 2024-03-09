@@ -1,0 +1,80 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30vh;
+    flex-direction: column;
+    width: 90vw;
+}
+
+.container span {
+    font-size: 1.4rem;
+    font-family: var(--font-monoton);
+    font-weight: bold;
+}
+
+.music {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.music .bar {
+    width: 12px;
+    border-radius: 10px;
+    background: white;
+    animation: movement 1.5s ease-in-out infinite;
+}
+
+@keyframes movement {
+    0%, 100% {
+        height: 2px;
+    }
+    50% {
+        height: 50px;
+    }
+}
+
+.music .bar:nth-child(1) {
+    background-color: var(--clr-red);
+    animation-delay: 1s;
+}
+.music .bar:nth-child(2) {
+    background-color: var(--clr-black);
+    animation-delay: .8s;
+}
+.music .bar:nth-child(3) {
+    background-color: var(--clr-red);
+    animation-delay: .6s;
+}
+.music .bar:nth-child(4) {
+    background-color: var(--clr-black);
+    animation-delay: .4s;
+}
+.music .bar:nth-child(5) {
+    background-color: var(--clr-red);
+    animation-delay: .2s;
+}
+.music .bar:nth-child(6) {
+    background-color: var(--clr-black);
+    animation-delay: .2s;
+}
+.music .bar:nth-child(7) {
+    background-color: var(--clr-red);
+    animation-delay: .4s;
+}
+.music .bar:nth-child(8) {
+    background-color: var(--clr-black);
+    animation-delay: .6s;
+}
+.music .bar:nth-child(9) {
+    background-color: var(--clr-red);
+    animation-delay: .8s;
+}
+.music .bar:nth-child(10) {
+    background-color: var(--clr-black);
+    animation-delay: 1s;
+}

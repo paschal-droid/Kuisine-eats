@@ -1,0 +1,113 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin-top: 3rem;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-montserrat);
+    position: relative;
+}
+
+.heading {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 40%;
+}
+
+.details>div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.details>div>span:nth-child(1) {
+    color: var(--clr-red);
+    font-weight: 800;
+    font-family: var(--font-monoton);
+    word-spacing: 4px;
+}
+
+.details>div>span:nth-child(2) {
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--clr-smoke);
+    text-transform: capitalize;
+}
+
+.statusContainer {
+    display: flex;
+    gap: 15rem;
+}
+
+.status {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 3rem;
+    align-items: center;
+    position: relative;
+}
+
+.status>span {
+    width: max-content;
+}
+
+.spinner {
+    position: absolute;
+    left: -1.5rem;
+    top: -1.5rem;
+}
+
+.spinner>img {
+    width: 100px;
+    height: 100px;
+}
+
+.pending {
+    width: max-content;
+    background-color: orange;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    border-radius: 1rem;
+    color: white;
+}
+
+.completed {
+    border-radius: 1rem;
+    color: white;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    background: rgb(123 230 53);
+}
+
+.orderCompleted {   
+    padding: 1rem 1.5rem;
+    color: var(--clr-smoke);
+    display: flex;
+    background-color: #fff;
+    border: 1px solid var(--clr-smoke);
+    font-weight: 700;
+    justify-content: center;
+    font-family: var(--font-montserrat);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: .3s ease-in;
+    position: absolute;
+    outline: none;
+    top: 0;
+    right: 0;
+    margin-right: 8rem;
+    margin-top: 2rem;
+}
+
+.orderCompleted:hover, .orderCompleted:active {
+    background-color: var(--clr-black);
+    transform: scale(1.01);
+    color: white;
+}

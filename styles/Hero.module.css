@@ -1,0 +1,190 @@
+.container {
+    display: flex;
+    gap: 1rem;
+    margin-top: 4rem;
+    padding: auto 1rem;
+    position: relative;
+}
+
+.first {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+    top: 2rem;
+    flex: 1;
+    align-items: center;
+    line-height: 1.4;
+    padding: auto 1rem;
+}
+
+.clip {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    background-color: var(--clr-pink);
+    margin-top: 3rem;
+    padding: .8rem;
+    align-self: start;
+    margin-left: 2rem;
+    border-radius: 2rem;
+    font-size: 10px;
+    font-family: var(--font-montserrat);
+    color: var(--clr-red);
+    font-weight: bold;
+}
+
+.first>span:nth-child(2){
+    font-family: var(--font-monoton);
+    font-size: 3.5rem;
+    letter-spacing: 1.2px;
+    width: 90%;
+    font-weight: bold;
+}
+
+.paragraph {
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--clr-smoke);
+    width: 70%;
+    align-self: flex-start;
+    margin-left: 2rem;
+    font-family: var(--font-montserrat);
+}
+
+.second {
+    position: relative;
+    align-items: center;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+.imageContainer {
+    width: 80%;
+    overflow: hidden;
+    position: relative;
+    top: -5rem;
+}
+
+.imageContainer img {
+    width: 100%;
+}
+
+.groupButtons {
+    width: 70%;
+    display: flex;
+    gap: 1rem;
+    margin-left: 2rem;
+    align-self: flex-start;
+}
+
+.groupButtons>button{
+    outline: none;
+    border: 0;
+    padding: 1rem 2rem;
+    font-family: var(--font-montserrat);
+    cursor: pointer;
+    font-weight: 500;
+    border-radius: 10px;
+    color: white;
+    transition: .4s ease-in;
+}
+
+.groupButtons>:nth-child(1){
+    background-color: var(--clr-red);
+}
+.groupButtons>:nth-child(1):hover {
+    background-color: white;
+    color: var(--clr-red);
+    transform: scale(1.01);
+    border: 1px solid var(--clr-red);
+}
+.groupButtons>:nth-child(2){
+    background-color: var(--clr-black);
+}
+.groupButtons>:nth-child(2):hover {
+    background-color: white;
+    color: var(--clr-black);
+    transform: scale(1.01);
+    border: 1px solid var(--clr-black);
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        margin-top: 2rem;
+    }
+
+    .first {
+        top: 0;
+    }
+
+    .first>span:nth-child(2) {
+        font-size: 1.5rem;
+    }
+
+    .imageContainer {
+        top: 0;
+        display: flex;
+        align-self: baseline;
+    }
+
+    .paragraph {
+        font-size: 10px;
+    }
+
+    .groupButtons>button {
+        padding: .5rem 1rem;
+        font-size: 10px;
+        font-weight: 800;
+    }
+
+    .clip {
+        width: auto;
+        font-size: 7px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        margin-top: 1rem;
+        flex-direction: column-reverse;
+        gap: 0.5rem;
+        padding-bottom: 4rem;
+    }
+
+    .imageContainer {
+        top: 0;
+        display: flex;
+        align-self: center;
+    }
+
+    .first {
+        justify-content: center;
+        text-align: center;
+    }
+    .first>* {
+        margin-left: 0;
+        align-self: center;
+    }
+    .clip {
+        margin-top: 0;
+    }
+
+    .first>span:nth-child(2) {
+        font-size: 2.5rem;
+    }
+
+    .groupButtons{
+        align-items: center;
+        justify-content: center;
+    }
+
+    .groupButtons>button {
+        font-size: 12px;
+        padding: 1rem 1rem;
+
+    }
+
+}
